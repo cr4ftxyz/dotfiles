@@ -44,7 +44,7 @@ return {
         "lua_ls",
         "bashls",
         {
-          "tsserver",
+          "ts_ls",
           root_dir = lspconfig.util.find_package_json_ancestor,
           single_file_support = false,
         },

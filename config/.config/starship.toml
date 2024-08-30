@@ -10,16 +10,18 @@ $os\
 $directory\
 [](fg:#769ff0 bg:#394260)\
 $git_branch\
+$git_commit\
+$git_state\
 $git_status\
 [](fg:#394260 bg:#212736)\
 $character
 """
 
 right_format = """
-$nodejs\
-$aws\
-$terraform\
 $status\
+$aws\
+$nodejs\
+$terraform\
 $time\
 """
 
@@ -52,17 +54,27 @@ Manjaro = " 󱘊 "
 
 [git_branch]
 symbol = ""
-style = "bg:#394260"
-format = '[[ $symbol $branch ](fg:#769ff0 bg:#394260)]($style)'
+style = "fg:#769ff0 bg:#394260"
+format = '[ $symbol $branch ]($style)'
+
+[git_commit]
+style = "fg:#769ff0 bg:#394260"
+tag_symbol = "  "
+format = '[\($hash$tag\)]($style)'
+tag_disabled = false
+
+[git_state]
+style = "fg:#769ff0 bg:#394260"
+format = '[ \($state( $progress_current/$progress_total)\) ]($style)'
 
 [git_status]
-style = "bg:#394260"
-format = '[[($all_status$ahead_behind )](fg:#769ff0 bg:#394260)]($style)'
+style = "fg:#769ff0 bg:#394260"
+format = '[($all_status$ahead_behind)]($style)'
 
 [nodejs]
 symbol = ""
-style = "bg:#212736"
-format = '[[ $symbol ($version) ](fg:#769ff0 bg:#212736)]($style)'
+style = "fg:#769ff0 bg:#394260"
+format = '[ $symbol ($version) ]($style)'
 
 [status]
 symbol = "✗"

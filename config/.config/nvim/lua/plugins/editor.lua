@@ -168,7 +168,7 @@ return {
     opts = { "css", "sass", "scss", "html" },
   },
   {
-    "MeanderingProgrammer/markdown.nvim",
+    "MeanderingProgrammer/render-markdown.nvim",
     dependencies = { "nvim-treesitter/nvim-treesitter" },
     ft = { "markdown" },
     opts = {},
